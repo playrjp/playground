@@ -1,0 +1,44 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+
+<style>
+    .marquee {
+        overflow: auto;
+        overflow-style: marquee;
+        -webkit-marquee-style: slide;
+        -webkit-marquee-play-count: 1;
+        -webkit-marquee-direction: normal;
+        -webkit-marquee-speed: normal;
+        -webkit-marquee-loop: infinite;
+        -moz-marquee-style: slide;
+        -moz-marquee-play-count: 1;
+        -moz-marquee-direction: normal;
+        -moz-marquee-speed: normal;
+        -moz-marquee-loop: infinite;
+        -webkit-marquee-style: slide;
+        -webkit-marquee-direction: backwards;
+        -webkit-marquee-speed: normal;
+        -webkit-marquee-repetition: infinite;
+        marquee-style: slide;
+        marquee-play-count: 1;
+        marquee-direction: normal;
+        marquee-speed: normal;
+        marquee-loop: infinite;
+        overflow: -webkit-marquee;
+        overflow: marquee;
+        white-space:nowrap;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<div>
+    <p class="marquee">The quick brown fox jumps over the lazy dog.</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+
+<style>
+    #main th {
+        text-align: left;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<table>
+    <tbody>
+        <tr>
+            <th>
+                Jpeg
+            </th>
+            <th>
+                Webp
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <img src="../img/webp_02.jpg" alt="jpeg" class="img">
+            </td>
+            <td>
+                <img src="../img/webp_01.webp" alt="webp" class="img">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                251,550 byte
+            </td>
+            <td>
+                121,604 byte
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Fallback</h2>
+<h3>Using the Picture Element</h3>
+
+<picture>
+    <source srcset="../img/webp_01.webp" type="image/webp">
+    <img src="../img/webp_02.jpg" alt="おきなわガールズ百景021">
+</picture>
+
+
+<h2>Licenses</h2>
+
+<ul>
+    <li>Photo Credit: <a href="https://flic.kr/p/a5aAry" rel="nofollow" target="_blank">おきなわガールズ百景021</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">cc</a></li>
+</ul>
+
+{% endblock %}
+
+{% block foot %}
+
+{% endblock %}

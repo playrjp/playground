@@ -1,0 +1,23 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+
+<style>
+    #main ruby {
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<ruby>
+    <rb>とある<rb>科学<rb>の<rb>超電磁砲</rb>
+        <rp>（</rp><rt>とある<rt>かがく<rt>の<rt>レールガン</rt><rp>、</rp>
+        <rtc><rt>Toaru<rt>Kagaku<rt>no<rt>Rērugan</rt></rtc><rp>）</rp>
+        </ruby>
+
+{% endblock %}

@@ -1,0 +1,222 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+
+<style>
+    .grid {
+        display: -ms-grid;
+        -ms-grid-columns: 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1% 1fr 1%;
+        -ms-grid-rows: 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px;
+    }
+
+    .grid > div {
+        background: #57B196;
+        padding: 5px;
+    }
+
+    .row-1 {
+        -ms-grid-row: 2;
+    }
+
+    .span-1 {
+        -ms-grid-column-span: 1;
+    }
+
+    .start-1 {
+        -ms-grid-column: 2;
+    }
+
+    .row-2 {
+        -ms-grid-row: 4;
+    }
+
+    .span-2 {
+        -ms-grid-column-span: 3;
+    }
+
+    .start-2 {
+        -ms-grid-column: 4;
+    }
+
+    .row-3 {
+        -ms-grid-row: 6;
+    }
+
+    .span-3 {
+        -ms-grid-column-span: 5;
+    }
+
+    .start-3 {
+        -ms-grid-column: 6;
+    }
+
+    .row-4 {
+        -ms-grid-row: 8;
+    }
+
+    .span-4 {
+        -ms-grid-column-span: 7;
+    }
+
+    .start-4 {
+        -ms-grid-column: 8;
+    }
+
+    .row-5 {
+        -ms-grid-row: 10;
+    }
+
+    .span-5 {
+        -ms-grid-column-span: 9;
+    }
+
+    .start-5 {
+        -ms-grid-column: 10;
+    }
+
+    .row-6 {
+        -ms-grid-row: 12;
+    }
+
+    .span-6 {
+        -ms-grid-column-span: 11;
+    }
+
+    .start-6 {
+        -ms-grid-column: 12;
+    }
+
+    .row-7 {
+        -ms-grid-row: 14;
+    }
+
+    .span-7 {
+        -ms-grid-column-span: 13;
+    }
+
+    .start-7 {
+        -ms-grid-column: 14;
+    }
+
+    .row-8 {
+        -ms-grid-row: 16;
+    }
+
+    .span-8 {
+        -ms-grid-column-span: 15;
+    }
+
+    .start-8 {
+        -ms-grid-column: 16;
+    }
+
+    .row-9 {
+        -ms-grid-row: 18;
+    }
+
+    .span-9 {
+        -ms-grid-column-span: 17;
+    }
+
+    .start-9 {
+        -ms-grid-column: 18;
+    }
+
+    .row-10 {
+        -ms-grid-row: 20;
+    }
+
+    .span-10 {
+        -ms-grid-column-span: 19;
+    }
+
+    .start-10 {
+        -ms-grid-column: 20;
+    }
+
+    .row-11 {
+        -ms-grid-row: 22;
+    }
+
+    .span-11 {
+        -ms-grid-column-span: 21;
+    }
+
+    .start-11 {
+        -ms-grid-column: 22;
+    }
+
+    .row-12 {
+        -ms-grid-row: 24;
+    }
+
+    .span-12 {
+        -ms-grid-column-span: 23;
+    }
+
+    .start-12 {
+        -ms-grid-column: 24;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<div class="grid">
+    <div class="row-1 span-11 start-1">01</div>
+    <div class="row-1 span-1 start-12">02</div>
+
+    <div class="row-2 span-10 start-1">01</div>
+    <div class="row-2 span-2 start-11">02</div>
+
+    <div class="row-3 span-9 start-1">01</div>
+    <div class="row-3 span-3 start-10">02</div>
+
+    <div class="row-4 span-8 start-1">01</div>
+    <div class="row-4 span-4 start-9">02</div>
+
+    <div class="row-5 span-7 start-1">01</div>
+    <div class="row-5 span-5 start-8">02</div>
+
+    <div class="row-6 span-6 start-1">01</div>
+    <div class="row-6 span-6 start-7">02</div>
+
+    <div class="row-7 span-5 start-1">01</div>
+    <div class="row-7 span-2 start-6">02</div>
+    <div class="row-7 span-5 start-8">03</div>
+
+    <div class="row-8 span-4 start-1">01</div>
+    <div class="row-8 span-4 start-5">02</div>
+    <div class="row-8 span-4 start-9">03</div>
+
+    <div class="row-9 span-3 start-1">01</div>
+    <div class="row-9 span-3 start-4">02</div>
+    <div class="row-9 span-3 start-7">03</div>
+    <div class="row-9 span-3 start-10">04</div>
+
+    <div class="row-10 span-2 start-1">01</div>
+    <div class="row-10 span-2 start-3">02</div>
+    <div class="row-10 span-2 start-5">03</div>
+    <div class="row-10 span-2 start-7">04</div>
+    <div class="row-10 span-2 start-9">05</div>
+    <div class="row-10 span-2 start-11">06</div>
+
+    <div class="row-11 span-1 start-1">01</div>
+    <div class="row-11 span-1 start-2">02</div>
+    <div class="row-11 span-1 start-3">03</div>
+    <div class="row-11 span-1 start-4">04</div>
+    <div class="row-11 span-1 start-5">05</div>
+    <div class="row-11 span-1 start-6">06</div>
+    <div class="row-11 span-1 start-7">07</div>
+    <div class="row-11 span-1 start-8">08</div>
+    <div class="row-11 span-1 start-9">09</div>
+    <div class="row-11 span-1 start-10">10</div>
+    <div class="row-11 span-1 start-11">11</div>
+    <div class="row-11 span-1 start-12">12</div>
+</div>
+
+{% endblock %}

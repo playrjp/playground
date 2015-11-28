@@ -1,0 +1,11 @@
+{% extends 'templates/layout.html' %}
+
+{% block content %}
+<ul id="index">
+    {% for this in collections.posts %}
+    <li>
+        <a href="{{this.path}}">{{this.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

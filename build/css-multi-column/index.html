@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Multi-column - Playground</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="My Playground for Future of Web Technology. ">
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/common.css">
+	<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/common.css">
+	<style>
+		#main p {
+			font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+		}
+		
+		.col-1 {
+			-webkit-column-width: 20em;
+			-moz-column-width: 20em;
+			column-width: 20em;
+		}
+		
+		.col-2 {
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+		}
+		
+		.col-3 {
+			-webkit-columns: 12 8em;
+			-moz-columns: 12 8em;
+			columns: 12 8em;
+		}
+		
+		.col-4 {
+			-webkit-column-gap: 2em;
+			-moz-column-gap: 2em;
+			column-gap: 2em;
+			-webkit-column-width: 20em;
+			-moz-column-width: 20em;
+			column-width: 20em;
+		}
+	</style>
+</head>
+
+<body>
+	<header id="header" role="banner">
+		<h1><a href="http://ground.playr.jp">Playground</a></h1>
+		<nav id="navigation" role="navigation">
+			<ul>
+				<li> <a href="http://playr.jp">Playr</a> </li>
+				<li> <a href="http://log.playr.jp">Playlog</a> </li>
+			</ul>
+		</nav>
+	</header>
+	<main id="main" role="main">
+		<h1 id="css-multi-column">CSS Multi-column</h1>
+		<ul>
+			<li><a href="http://www.w3.org/TR/css3-multicol/">CSS Multi-column Layout Module</a></li>
+			<li><a href="http://www.hcn.zaq.ne.jp/___/WEB/css-multicol-ja.html">CSS Multi-column Layout Module （日本語訳）</a></li>
+			<li><a href="http://caniuse.com/#feat=multicolumn">Can I use...</a></li>
+			<li><a href="https://developer.mozilla.org/ja/docs/Web/Guide/CSS/Using_multi-column_layouts">CSS マルチカラムレイアウトの利用 - Web developer guide | MDN</a></li>
+		</ul>
+		<p class="col-1"> 「天は人の上に人を造らず人の下に人を造らず」と言えり。されば天より人を生ずるには、万人は万人みな同じ位にして、生まれながら貴賤上下の差別なく、万物の霊たる身と心との働きをもって天地の間にあるよろずの物を資り、もって衣食住の用を達し、自由自在、互いに人の妨げをなさずしておのおの安楽にこの世を渡らしめ給うの趣意なり。されども今、広くこの人間世界を見渡すに、かしこき人あり、おろかなる人あり、貧しきもあり、富めるもあり、貴人もあり、下人もありて、その有様雲と泥との相違あるに似たるはなんぞや。その次第はなはだ明らかなり。『実語教』に、「人学ばざれば智なし、智なき者は愚人なり」とあり。されば賢人と愚人との別は学ぶと学ばざるとによりてできるものなり。また世の中にむずかしき仕事もあり、やすき仕事もあり。そのむずかしき仕事をする者を身分重き人と名づけ、やすき仕事をする者を身分軽き人という。すべて心を用い、心配する仕事はむずかしくして、手足を用うる力役はやすし。ゆえに医者、学者、政府の役人、または大なる商売をする町人、あまたの奉公人を召し使う大百姓などは、身分重くして貴き者と言うべし。
+			</p>
+		<p class="col-2"> 身分重くして貴ければおのずからその家も富んで、下々の者より見れば及ぶべからざるようなれども、その本を尋ぬればただその人に学問の力あるとなきとによりてその相違もできたるのみにて、天より定めたる約束にあらず。諺にいわく、「天は富貴を人に与えずして、これをその人の働きに与うるものなり」と。されば前にも言えるとおり、人は生まれながらにして貴賤・貧富の別なし。ただ学問を勤めて物事をよく知る者は貴人となり富人となり、無学なる者は貧人となり下人となるなり。
+			</p>
+		<p class="col-3"> 学問とは、ただむずかしき字を知り、解し難き古文を読み、和歌を楽しみ、詩を作るなど、世上に実のなき文学を言うにあらず。これらの文学もおのずから人の心を悦ばしめずいぶん調法なるものなれども、古来、世間の儒者・和学者などの申すよう、さまであがめ貴むべきものにあらず。古来、漢学者に世帯持ちの上手なる者も少なく、和歌をよくして商売に巧者なる町人もまれなり。これがため心ある町人・百姓は、その子の学問に出精するを見て、やがて身代を持ち崩すならんとて親心に心配する者あり。無理ならぬことなり。畢竟その学問の実に遠くして日用の間に合わぬ証拠なり。
+			</p>
+		<p class="col-4"> 学問とは、ただむずかしき字を知り、解し難き古文を読み、和歌を楽しみ、詩を作るなど、世上に実のなき文学を言うにあらず。これらの文学もおのずから人の心を悦ばしめずいぶん調法なるものなれども、古来、世間の儒者・和学者などの申すよう、さまであがめ貴むべきものにあらず。古来、漢学者に世帯持ちの上手なる者も少なく、和歌をよくして商売に巧者なる町人もまれなり。これがため心ある町人・百姓は、その子の学問に出精するを見て、やがて身代を持ち崩すならんとて親心に心配する者あり。無理ならぬことなり。畢竟その学問の実に遠くして日用の間に合わぬ証拠なり。
+			</p>
+	</main>
+	<footer id="footer" role="contentinfo">
+		<p id="copyright"> ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow">Metalsmith</a> </p>
+		<p id="updates"> Update:Thu Nov 19 2015 </p>
+	</footer>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-68414504-3', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+
+</html>

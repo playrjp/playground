@@ -1,0 +1,44 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<button id="pointerEvents">
+    Pointer Events
+</button>
+
+<script>
+    (function (window) {
+
+        'use strict';
+
+        const PointerEvents = function() {
+            this.init();
+        }
+
+        PointerEvents.prototype.init = function() {
+            this.button = document.getElementById('pointerEvents');
+        }
+
+        PointerEvents.prototype.call = function(event) {
+            this.button.addEventListener(event, () => {
+                alert(event);
+            });
+        }
+
+        const pointerEvents = new PointerEvents();
+
+        if (window.PointerEvent) {
+            pointerEvents.call('pointerdown');
+        } else {
+            pointerEvents.call('click');
+        }
+
+    }(window));
+</script>
+{% endblock %}

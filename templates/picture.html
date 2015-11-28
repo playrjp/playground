@@ -1,0 +1,24 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+
+<style>
+    #main img {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<picture>
+    <source media="(min-width: 650px)" srcset="http://placehold.jp/20/57b196/ffffff/900x300.png, http://placehold.jp/1350x300.png 1.5x">
+    <source media="(min-width: 465px)" srcset="http://placehold.jp/20/FFD25A/ffffff/600x300.png">
+    <img src="http://placehold.jp/20/FF837B/ffffff/300x300.png" alt="a cute kitten">
+</picture>
+
+{% endblock %}

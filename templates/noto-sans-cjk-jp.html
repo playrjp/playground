@@ -1,0 +1,40 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+<link href='http://fonts.googleapis.com/earlyaccess/notosansjapanese.css' rel='stylesheet' type='text/css'>
+
+<style>
+    .noto {
+        font-family: 'Noto Sans Japanese', serif;
+        font-style: normal;
+    }
+    .noto.\+250 {
+        font-weight: 100;
+    }
+    .noto.\+300 {
+        font-weight: 200;
+    }
+    .noto.\+350 {
+        font-weight: 300;
+    }
+    .noto.\+400 {
+        font-weight: 400;
+    }
+    .noto.\+500 {
+        font-weight: 500;
+    }
+    .noto.\+700 {
+        font-weight: 700;
+    }
+    .noto.\+900 {
+        font-weight: 900;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+{% endblock %}

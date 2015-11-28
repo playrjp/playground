@@ -1,0 +1,51 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../css/common.css">
+
+<style>
+    body {
+        scroll-behavior: smooth;
+    }
+    .box {
+        height: 100vh;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<div class="box" id="top">
+    <p>TOP</p>
+    <a href="#5">Goto 5F</a>
+</div>
+
+<div class="box" id="5">
+    <p>5F</p>
+    <a href="#1F"></a>
+    <a href="#4">Goto 4F</a>
+</div>
+
+<div class="box" id="4">
+    <p>4F</p>
+    <a href="#3">Goto 3F</a>
+</div>
+
+<div class="box" id="3">
+    <p>3F</p>
+    <a href="#2">Goto 2F</a>
+</div>
+
+<div class="box" id="2">
+    <p>2F</p>
+    <a href="#1">Goto 1F</a>
+</div>
+
+<div id="1">
+    <p>1F</p>
+    <a href="#top">Goto Top</a>
+</div>
+
+{% endblock %}
