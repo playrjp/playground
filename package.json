@@ -1,6 +1,10 @@
 {
   "name": "static-site-simple-example",
   "private": true,
+  "scripts": {
+    "start": "node build.js",
+    "watch": "node build.js"
+  },
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "handlebars": "^4.0.4",
