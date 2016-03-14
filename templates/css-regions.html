@@ -1,0 +1,39 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<style>
+    #main p {
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+    }
+
+    #source {
+        -webkit-flow-into: main;
+        -ms-flow-into: main;
+        flow-into: main;
+    }
+
+    .region {
+        -webkit-flow-from: main;
+        -ms-flow-from: main;
+        flow-from: main;
+        border: 1px solid #000;
+        height: 250px;
+        width: 250px;
+        display: inline-block;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<iframe id="source" src="../css-hyphenation/index.html"></iframe>
+
+<div class="region"></div>
+<div class="region"></div>
+<div class="region"></div>
+<div class="region"></div>
+<div class="region"></div>
+
+{% endblock %}

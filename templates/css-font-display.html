@@ -1,0 +1,19 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<style>
+    #main p {
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<p>
+    Css font display
+</p>
+
+{% endblock %}

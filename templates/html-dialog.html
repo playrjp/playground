@@ -1,0 +1,64 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<style>
+    #modal::backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<!-- Dialog Window -->
+<dialog>
+    <p>This is Dialog!</p>
+    <button id="dialog__close">Close</button>
+</dialog>
+<button id="dialog__show">Open Dialog!</button>
+
+<!-- Modal Window -->
+<dialog id="modal">
+    <p>This is Dialog!</p>
+    <button id="modal__close">Close</button>
+</dialog>
+<button id="modal__show">Open Modal!</button>
+
+
+<script>
+    // Dialog Window
+    const dialog      = document.querySelector('dialog');
+    const showDialog  = document.getElementById('dialog__show');
+    const closeDialog = document.getElementById('dialog__close');
+
+    showDialog.addEventListener('click', () => {
+        dialog.show();
+    });
+
+    closeDialog.addEventListener('click', () => {
+        dialog.close();
+    });
+
+    // Modal Window
+    const modal      = document.getElementById('modal');
+    const showModal  = document.getElementById('modal__show');
+    const closeModal = document.getElementById('modal__close');
+
+    showModal.addEventListener('click', () => {
+        modal.showModal();
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.close();
+    });
+</script>
+
+
+{% endblock %}

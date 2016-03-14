@@ -1,0 +1,68 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<style>
+    #main div {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+    }
+
+    :root {
+        --bg-color-pink: pink;
+        --bg-color-blue: blue;
+        --bg-color-yellow: yellow;
+    }
+
+    .pink {
+        background-color: var(--bg-color-pink);
+    }
+
+    .blue {
+        background-color: var(--bg-color-blue);
+    }
+
+    .yellow {
+        background-color: var(--bg-color-yellow);
+    }
+
+    .changeColor {
+        --bg-color-pink: yellow;
+        --bg-color-blue: pink;
+        --bg-color-yellow: blue;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<div class="pink">
+    pink
+</div>
+
+<div class="blue">
+    blue
+</div>
+
+<div class="yellow">
+    yellow
+</div>
+
+<section class="changeColor">
+    <h2>Change color's</h2>
+    <div class="pink">
+        pink
+    </div>
+
+    <div class="blue">
+        blue
+    </div>
+
+    <div class="yellow">
+        yellow
+    </div>
+</section>
+
+{% endblock %}

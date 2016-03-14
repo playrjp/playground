@@ -1,0 +1,44 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<button id="pointerEvents">
+    buttun
+</button>
+
+<script>
+    'use strict';
+
+    const PointerEvents = function() {
+        this.init();
+    }
+
+    PointerEvents.prototype.init = function() {
+        this.button = document.getElementById('pointerEvents');
+    }
+
+    PointerEvents.prototype.call = function(event) {
+        this.button.addEventListener(event, e => {
+            if (event === 'pointerdown') {
+                console.log(e.pointerType + 'イベントを感知しました！');
+                alert(e.pointerType + 'イベントを感知しました！');
+            } else {
+                alert('このブラウザはポインターイベントに対応してません');
+            }
+        }), false;
+    }
+
+    const pointerEvents = new PointerEvents();
+
+    if (window.PointerEvent) {
+        pointerEvents.call('pointerdown');
+    } else {
+        pointerEvents.call('click');
+    }
+</script>
+{% endblock %}

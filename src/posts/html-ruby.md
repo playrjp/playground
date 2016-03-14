@@ -1,11 +1,11 @@
 ---
-title: Ruby
+title: HTML Ruby
 date: 2012-09-28
-template: ruby.html
+template: html-ruby.html
 ---
 
-Ruby
-====
+HTML Ruby Element
+=================
 
 - [Can I use...](http://caniuse.com/#feat=ruby)
 - [ruby 要素 - HTML | MDN](https://developer.mozilla.org/ja/docs/Web/HTML/Element/ruby)

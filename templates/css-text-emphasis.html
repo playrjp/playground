@@ -1,0 +1,97 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+<style>
+    #main p {
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+        font-size: 2rem;
+    }
+
+    .filled {
+        -webkit-text-emphasis: filled;
+        text-emphasis: filled;
+    }
+
+    .open {
+        -webkit-text-emphasis: open;
+        text-emphasis: open;
+    }
+
+    .sesame-filled {
+        -webkit-text-emphasis: filled sesame;
+        text-emphasis: filled sesame;
+    }
+
+    .sesame-open {
+        -webkit-text-emphasis: open sesame;
+        text-emphasis: open sesame;
+    }
+
+    .string {
+        -webkit-text-emphasis: "旨";
+        text-emphasis: "旨";
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<dl>
+    <dt>
+        Default
+    </dt>
+    <dd>
+        <p>
+            マウンテンデューは<em>うまい</em>。
+        </p>
+    </dd>
+
+    <dt>
+        Filled
+    </dt>
+    <dd>
+        <p>
+            マウンテンデューは<em class="filled">うまい</em>。
+        </p>
+    </dd>
+
+    <dt>
+        Open
+    </dt>
+    <dd>
+        <p>
+            マウンテンデューは<em class="open">うまい</em>。
+        </p>
+    </dd>
+
+    <dt>
+        Sesame + Filled
+    </dt>
+    <dd>
+        <p>
+            マウンテンデューは<em class="sesame-filled">うまい</em>。
+        </p>
+    </dd>
+
+    <dt>
+        Sesame + Opne
+    </dt>
+    <dd>
+        <p>
+            マウンテンデューは<em class="sesame-open">うまい</em>。
+        </p>
+    </dd>
+
+    <dt>
+        String
+    </dt>
+    <dd>
+        <p>
+            マウンテンデューは<em class="string">うまい</em>。
+        </p>
+    </dd>
+</dl>
+
+{% endblock %}

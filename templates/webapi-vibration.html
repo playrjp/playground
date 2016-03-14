@@ -1,0 +1,52 @@
+{% extends 'templates/layout.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+
+{{ contents | safe }}
+
+<button id="buttonElement_1">Vibration 1</button>
+<p>
+   一回だけ振動
+</p>
+
+<button id="buttonElement_2">Vibration 2</button>
+<p>
+    三回も振動
+</p>
+
+<button id="buttonElement_3">Vibration 3</button>
+<p>
+    タッチしている間振動
+</p>
+
+<script>
+    'use strict';
+
+    const buttonElement_1 = document.getElementById('buttonElement_1');
+    const buttonElement_2 = document.getElementById('buttonElement_2');
+    const buttonElement_3 = document.getElementById('buttonElement_3');
+
+    // 一回だけ振動
+    buttonElement_1.addEventListener('touchEnd', () => {
+        window.navigator.vibrate(200);
+    });
+
+    // 三回も振動
+    buttonElement_2.addEventListener('touchEnd', () => {
+        window.navigator.vibrate([200, 100, 200]);
+    });
+
+    // タッチしている間振動（最長5秒）
+    buttonElement_3.addEventListener('touchStart', () => {
+        window.navigator.vibrate(5000);
+    });
+
+    buttonElement_3.addEventListener('touchEnd', () => {
+        window.navigator.vibrate(0);
+    });
+</script>
+
+{% endblock %}
