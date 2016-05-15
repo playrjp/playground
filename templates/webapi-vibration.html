@@ -14,7 +14,7 @@
 
 <button id="buttonElement_2">Vibration 2</button>
 <p>
-    三回も振動
+    二回も振動
 </p>
 
 <button id="buttonElement_3">Vibration 3</button>
@@ -23,30 +23,54 @@
 </p>
 
 <script>
-    'use strict';
+    (function(window, document) {
+        'use strict';
+        
+        const buttonElement_1 = document.getElementById('buttonElement_1');
+        const buttonElement_2 = document.getElementById('buttonElement_2');
+        const buttonElement_3 = document.getElementById('buttonElement_3');
+        
+        // タッチイベント検証
+        const supportTouch = 'ontouchend' in document;
+        const EVENTNAME_TOUCHSTART = supportTouch ? 'touchstart' : 'mousedown';
+        const EVENTNAME_TOUCHEND = supportTouch ? 'touchend' : 'mouseup';
+        
+        // ヴァイブレイトイベント
+        const Vibration = function() {
+            this.call();
+        };
+        
+        Vibration.prototype.call = time => {
+            if (window.navigator.vibrate) {
+                window.navigator.vibrate(time);
+            } else {
+                alert('このブラウザはバイブレートイベントに対応してません！');
+            }
+        };
+        
+        // 一回だけ振動
+        buttonElement_1.addEventListener(EVENTNAME_TOUCHEND, () => {
+            const vibtation = new Vibration();
+            vibtation.call(200);
+        });
 
-    const buttonElement_1 = document.getElementById('buttonElement_1');
-    const buttonElement_2 = document.getElementById('buttonElement_2');
-    const buttonElement_3 = document.getElementById('buttonElement_3');
+        // 二回も振動
+        buttonElement_2.addEventListener(EVENTNAME_TOUCHEND, () => {
+            const vibtation = new Vibration();
+            vibtation.call([200, 100, 200]);
+        });
 
-    // 一回だけ振動
-    buttonElement_1.addEventListener('touchEnd', () => {
-        window.navigator.vibrate(200);
-    });
+        // タッチしている間振動（最長5秒）
+        buttonElement_3.addEventListener(EVENTNAME_TOUCHSTART, () => {
+            const vibtation = new Vibration();
+            vibtation.call(5000);
+        });
 
-    // 三回も振動
-    buttonElement_2.addEventListener('touchEnd', () => {
-        window.navigator.vibrate([200, 100, 200]);
-    });
-
-    // タッチしている間振動（最長5秒）
-    buttonElement_3.addEventListener('touchStart', () => {
-        window.navigator.vibrate(5000);
-    });
-
-    buttonElement_3.addEventListener('touchEnd', () => {
-        window.navigator.vibrate(0);
-    });
+        buttonElement_3.addEventListener(EVENTNAME_TOUCHEND, () => {
+            const vibtation = new Vibration();
+            vibtation.call(0);
+        });
+    }(window, document));
 </script>
 
 {% endblock %}
