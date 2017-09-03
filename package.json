@@ -1,5 +1,5 @@
 {
-  "name": "Playground",
+  "name": "playground",
   "private": true,
   "scripts": {
     "start": "node build.js",
