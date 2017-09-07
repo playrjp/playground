@@ -57,9 +57,6 @@ Playground.prototype.build = callback => {
             outputStyle: "expanded",
             outputDir: 'css/'
         }))
-        .use(beautify({
-            preserve_newlines: false
-        }))
         .build(err => {
             const message = err ? err : 'Build complete';
             console.log(message);
