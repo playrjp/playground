@@ -1,91 +1,114 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>CSS Hyphenation - Playground</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="description" content="My Playground for Future of Web Technology. ">
-	<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/common.css">
-	<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
-	<style>
-		#main>section {
-			display: inline-block;
-			width: 200px;
-		}
-		
-		.none {
-			-webkit-hyphens: none;
-			-moz-hyphens: none;
-			-ms-hyphens: none;
-			hyphens: none;
-		}
-		
-		.manual {
-			-webkit-hyphens: manual;
-			-moz-hyphens: manual;
-			-ms-hyphens: manual;
-			hyphens: manual;
-		}
-		
-		.auto {
-			-webkit-hyphens: auto;
-			-moz-hyphens: auto;
-			-ms-hyphens: auto;
-			hyphens: auto;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CSS Hyphenation - Playground</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My Playground for Future of Web Technology. ">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/common.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    
+<style>
+    #main > section {
+        display: inline-block;
+        width: 200px;
+    }
+    .none {
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+    }
+    .manual {
+        -webkit-hyphens: manual;
+        -moz-hyphens: manual;
+        -ms-hyphens: manual;
+        hyphens: manual;
+    }
+    .auto {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+</style>
+
 </head>
-
 <body>
-	<header id="header" role="banner">
-		<h1><a href="http://ground.playr.jp">Playground</a></h1>
-		<nav id="navigation" role="navigation">
-			<ul>
-				<li> <a href="https://playr.jp">Playr</a> </li>
-				<li> <a href="http://log.playr.jp">Playlog</a> </li>
-			</ul>
-		</nav>
-	</header>
-	<main id="main" role="main">
-		<h1 id="css-hyphenation">CSS Hyphenation</h1>
-		<ul>
-			<li><a href="https://www.w3.org/TR/css3-text/#hyphenation">CSS Text Module Level 3</a></li>
-			<li><a href="https://developer.mozilla.org/ja/docs/Web/CSS/hyphens">hyphens - CSS | MDN</a></li>
-			<li><a href="http://caniuse.com/#feat=css-hyphens">Can I use...</a></li>
-		</ul>
-		<section>
-			<h1> none </h1>
-			<p class="none" lang="en"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-				montes, nascetur ridiculus mus. </p>
-		</section>
-		<section>
-			<h1> manual </h1>
-			<p class="manual" lang="en"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-				montes, nascetur ridiculus mus. </p>
-		</section>
-		<section>
-			<h1> auto </h1>
-			<p class="auto" lang="en"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-				montes, nascetur ridiculus mus. </p>
-		</section>
-	</main>
-	<footer id="footer" role="contentinfo">
-		<p id="updates"> Update:Mon Mar 14 2016 </p>
-		<p id="copyright"> ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow" target="_blank">Metalsmith</a> </p>
-	</footer>
-	<script>
-		window.ga = function() {
-			ga.q.push(arguments)
-		};
-		ga.q = [];
-		ga.l = +new Date;
-		ga('create', 'UA-68414504-3', 'auto');
-		ga('send', 'pageview')
-	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
+    <header id="header" role="banner">
+        <h1><a href="http://ground.playr.jp">Playground</a></h1>
+        <nav id="navigation" role="navigation">
+            <ul>
+                <li>
+                    <a href="https://playr.jp">Playr</a>
+                </li>
+                <li>
+                    <a href="http://log.playr.jp">Playlog</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        
 
+<h1 id="css-hyphenation">CSS Hyphenation</h1>
+<ul>
+<li><a href="https://www.w3.org/TR/css3-text/#hyphenation">CSS Text Module Level 3</a></li>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/CSS/hyphens">hyphens - CSS | MDN</a></li>
+<li><a href="http://caniuse.com/#feat=css-hyphens">Can I use...</a></li>
+</ul>
+
+
+<section>
+    <h1>
+        none
+    </h1>
+    <p class="none" lang="en">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+</section>
+
+<section>
+    <h1>
+        manual
+    </h1>
+    <p class="manual" lang="en">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+</section>
+
+<section>
+    <h1>
+        auto
+    </h1>
+    <p class="auto" lang="en">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+</section>
+
+
+
+
+
+
+
+    </main>
+    <footer id="footer" role="contentinfo">
+        <p id="updates">
+            Update:Mon Mar 14 2016
+        </p>
+        <p id="copyright">
+            ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow" target="_blank">Metalsmith</a>
+        </p>
+    </footer>
+    
+
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-68414504-3','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
 </html>
