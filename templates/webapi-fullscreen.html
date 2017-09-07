@@ -15,7 +15,7 @@
 {{ contents | safe }}
 
 <div>
-    <img src="http://placehold.jp/20/FF837B/ffffff/640x360.png" alt="a cute kitten" id="imageElement" width="640" height="360">
+    <img src="https://placehold.jp/20/FF837B/ffffff/640x360.png" alt="a cute kitten" id="imageElement" width="640" height="360">
 </div>
 
 <p>
@@ -36,13 +36,17 @@
             if (target.requestFullscreen) {
                 // 標準
                 target.requestFullscreen();
+            } else if (target.mozRequestFullScreen) {
+                // Firefox フォールバック
+                target.mozRequestFullScreen();
             } else if (target.msRequestFullscreen) {
-                // ms フォールバック
+                // Edge フォールバック
                 target.msRequestFullscreen();
             } else if (target.webkitRequestFullscreen) {
-                // webkit フォールバック
+                // WebKit フォールバック
                 target.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
             }
+
         } else {
 
             /**
@@ -52,11 +56,14 @@
             if (document.exitFullscreen) {
                 // 標準
                 document.exitFullscreen();
+            } else if (document.mozCancelFullScree) {
+                // Firefox フォールバック
+                document.mozCancelFullScree();
             } else if (document.msExitFullscreen) {
-                // ms フォールバック
+                // Edge フォールバック
                 document.msExitFullscreen();
             } else if (document.webkitExitFullscreen) {
-                // webkit フォールバック
+                // WebKit フォールバック
                 document.webkitExitFullscreen();
             }
         }
