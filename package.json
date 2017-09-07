@@ -6,20 +6,17 @@
     "watch": "node build.js -m watch"
   },
   "devDependencies": {
+    "argv": "0.0.2",
     "browser-sync": "^2.18.7",
     "metalsmith": "^2.3.0",
+    "metalsmith-assets": "^0.1.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-sass": "^1.4.0",
     "metalsmith-templates": "^0.7.0",
     "metalsmith-updated": "^0.1.6",
-    "metalsmith-watch": "^1.0.3"
-  },
-  "dependencies": {
-    "argv": "0.0.2",
-    "metalsmith-assets": "^0.1.0",
-    "metalsmith-beautify": "0.1.0",
-    "metalsmith-sass": "^1.4.0",
+    "metalsmith-watch": "^1.0.3",
     "nunjucks": "^3.0.0"
   }
 }
