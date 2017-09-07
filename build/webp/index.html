@@ -1,77 +1,108 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Webp - Playground</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="description" content="My Playground for Future of Web Technology. ">
-	<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/common.css">
-	<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
-	<style>
-		#main th {
-			text-align: left;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Webp - Playground</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My Playground for Future of Web Technology. ">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/common.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    
+<style>
+    #main th {
+        text-align: left;
+    }
+</style>
+
 </head>
-
 <body>
-	<header id="header" role="banner">
-		<h1><a href="http://ground.playr.jp">Playground</a></h1>
-		<nav id="navigation" role="navigation">
-			<ul>
-				<li> <a href="https://playr.jp">Playr</a> </li>
-				<li> <a href="http://log.playr.jp">Playlog</a> </li>
-			</ul>
-		</nav>
-	</header>
-	<main id="main" role="main">
-		<h1 id="webp">Webp</h1>
-		<ul>
-			<li><a href="https://developers.google.com/speed/webp/">A new image format for the Web | WebP | Google Developers</a></li>
-			<li><a href="http://caniuse.com/#search=webp">Can I use...</a></li>
-		</ul>
-		<table>
-			<tbody>
-				<tr>
-					<th> Jpeg </th>
-					<th> Webp </th>
-				</tr>
-				<tr>
-					<td> <img src="../img/webp_02.jpg" alt="jpeg" class="img"> </td>
-					<td> <img src="../img/webp_01.webp" alt="webp" class="img"> </td>
-				</tr>
-				<tr>
-					<td> 251,550 byte </td>
-					<td> 121,604 byte </td>
-				</tr>
-			</tbody>
-		</table>
-		<h2>Fallback</h2>
-		<h3>Using the Picture Element</h3>
-		<picture>
-			<source srcset="../img/webp_01.webp" type="image/webp"> <img src="../img/webp_02.jpg" alt="おきなわガールズ百景021"> </picture>
-		<h2>Licenses</h2>
-		<ul>
-			<li>Photo Credit: <a href="https://flic.kr/p/a5aAry" rel="nofollow" target="_blank">おきなわガールズ百景021</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">cc</a></li>
-		</ul>
-	</main>
-	<footer id="footer" role="contentinfo">
-		<p id="updates"> Update:Fri Nov 20 2015 </p>
-		<p id="copyright"> ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow" target="_blank">Metalsmith</a> </p>
-	</footer>
-	<script>
-		window.ga = function() {
-			ga.q.push(arguments)
-		};
-		ga.q = [];
-		ga.l = +new Date;
-		ga('create', 'UA-68414504-3', 'auto');
-		ga('send', 'pageview')
-	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
+    <header id="header" role="banner">
+        <h1><a href="http://ground.playr.jp">Playground</a></h1>
+        <nav id="navigation" role="navigation">
+            <ul>
+                <li>
+                    <a href="https://playr.jp">Playr</a>
+                </li>
+                <li>
+                    <a href="http://log.playr.jp">Playlog</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        
 
+<h1 id="webp">Webp</h1>
+<ul>
+<li><a href="https://developers.google.com/speed/webp/">A new image format for the Web  |  WebP  |  Google Developers</a></li>
+<li><a href="http://caniuse.com/#search=webp">Can I use...</a></li>
+</ul>
+
+
+<table>
+    <tbody>
+        <tr>
+            <th>
+                Jpeg
+            </th>
+            <th>
+                Webp
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <img src="../img/webp_02.jpg" alt="jpeg" class="img">
+            </td>
+            <td>
+                <img src="../img/webp_01.webp" alt="webp" class="img">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                251,550 byte
+            </td>
+            <td>
+                121,604 byte
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Fallback</h2>
+<h3>Using the Picture Element</h3>
+
+<picture>
+    <source srcset="../img/webp_01.webp" type="image/webp">
+    <img src="../img/webp_02.jpg" alt="おきなわガールズ百景021">
+</picture>
+
+
+<h2>Licenses</h2>
+
+<ul>
+    <li>Photo Credit: <a href="https://flic.kr/p/a5aAry" rel="nofollow" target="_blank">おきなわガールズ百景021</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">cc</a></li>
+</ul>
+
+
+    </main>
+    <footer id="footer" role="contentinfo">
+        <p id="updates">
+            Update:Fri Nov 20 2015
+        </p>
+        <p id="copyright">
+            ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow" target="_blank">Metalsmith</a>
+        </p>
+    </footer>
+    
+
+
+
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-68414504-3','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
 </html>
