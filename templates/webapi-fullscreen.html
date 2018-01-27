@@ -15,16 +15,19 @@
 {{ contents | safe }}
 
 <div>
-    <img src="https://placehold.jp/20/FF837B/ffffff/640x360.png" alt="a cute kitten" id="imageElement" width="640" height="360">
+    <a href="#" id="imageWrapper"><img src="https://placehold.jp/20/FF837B/ffffff/640x360.png" alt="a cute kitten" id="imageElement" width="640" height="360"></a>
 </div>
 
-<p>
-    Enterキーで画像が<br>
-    Zキーで画面全体がフルスクリーン起動
-</p>
+<p>画像をクリックで画像をフルスクリーン化</p>
+
+<button id="button">ボタン</button>
+
+<p>ボタンをクリックで画面を全画面化</p>
 
 <script>
-    const imageElement = document.getElementById("imageElement");
+    const button = document.getElementById('button');
+    const imageWrapper = document.getElementById('imageWrapper');
+    const imageElement = document.getElementById('imageElement');
 
     function toggleFullScreen(target) {
         if (!document.fullscreenElement) {
@@ -69,16 +72,17 @@
         }
     }
 
-    document.addEventListener("keydown", e => {
-        if (e.keyCode === 13) {
-            // Hook Enter Key
-            toggleFullScreen(imageElement);
-        } else if (e.keyCode === 90) {
-            // Hook Z Key
-            toggleFullScreen(document.documentElement);
-        }
-    }, false);
+    imageWrapper.addEventListener('click', e => {
+        e.preventDefault();
 
+        toggleFullScreen(imageElement);
+    });
+
+    button.addEventListener('click', e => {
+        e.preventDefault();
+
+        toggleFullScreen(document.documentElement);
+    });
 </script>
 
 
