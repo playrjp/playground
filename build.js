@@ -6,7 +6,6 @@ const markdown    = require('metalsmith-markdown');
 const permalinks  = require('metalsmith-permalinks');
 const templates   = require('metalsmith-templates');
 const sass        = require('metalsmith-sass');
-const beautify    = require('metalsmith-beautify');
 const updated     = require('metalsmith-updated');
 const browserSync = require('browser-sync');
 const argv        = require('argv');
