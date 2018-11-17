@@ -340,5 +340,11 @@
         "hash": "6cfef0d2bbedbb9ec20d4a74ab59e973",
         "created": "2018-11-17T03:11:24.657Z",
         "updated": "2018-11-17T03:11:24.657Z"
+    },
+    "CNAME": {
+        "filename": "CNAME",
+        "hash": "0eda632c2c419402d3fc59d3706e68f5",
+        "created": "2018-11-17T06:29:24.005Z",
+        "updated": "2018-11-17T06:29:24.005Z"
     }
 }
