@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WebAPI Vibration - Playground</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My Playground for Future of Web Technology. ">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/common.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    
+
+</head>
+<body>
+    <header id="header" role="banner">
+        <h1><a href="http://ground.playr.jp">Playground</a></h1>
+        <nav id="navigation" role="navigation">
+            <ul>
+                <li>
+                    <a href="https://playr.jp">Playr</a>
+                </li>
+                <li>
+                    <a href="http://log.playr.jp">Playlog</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        
+
+<h1 id="webapi-vibration">WebAPI Vibration</h1>
+<ul>
+<li><a href="https://w3c.github.io/vibration/">Vibration API</a></li>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/Guide/API/Vibration">Vibration API - Web developer guide | MDN</a></li>
+<li><a href="http://caniuse.com/#feat=css-scroll-behavior">Can I use...</a></li>
+</ul>
+
+
+<button id="buttonElement_1">Vibration 1</button>
+<p>
+   一回だけ振動
+</p>
+
+<button id="buttonElement_2">Vibration 2</button>
+<p>
+    二回も振動
+</p>
+
+<button id="buttonElement_3">Vibration 3</button>
+<p>
+    タッチしている間振動
+</p>
+
+<script>
+    (function(window, document) {
+        'use strict';
+
+        const buttonElement_1 = document.getElementById('buttonElement_1');
+        const buttonElement_2 = document.getElementById('buttonElement_2');
+        const buttonElement_3 = document.getElementById('buttonElement_3');
+
+        // タッチイベント検証
+        const supportTouch = 'ontouchend' in document;
+        const EVENTNAME_TOUCHSTART = supportTouch ? 'touchstart' : 'mousedown';
+        const EVENTNAME_TOUCHEND = supportTouch ? 'touchend' : 'mouseup';
+
+        // ヴァイブレイトイベント
+        const Vibration = function() {};
+
+        Vibration.prototype.call = time => {
+            if (window.navigator.vibrate) {
+                window.navigator.vibrate(time);
+            } else {
+                alert('このブラウザはバイブレートイベントに対応してません！');
+            }
+        };
+
+        const vibtation = new Vibration();
+
+        // 一回だけ振動
+        buttonElement_1.addEventListener(EVENTNAME_TOUCHEND, () => {
+            vibtation.call(200);
+        });
+
+        // 二回も振動
+        buttonElement_2.addEventListener(EVENTNAME_TOUCHEND, () => {
+            vibtation.call([200, 100, 200]);
+        });
+
+        // タッチしている間振動（最長5秒）
+        buttonElement_3.addEventListener(EVENTNAME_TOUCHSTART, () => {
+            vibtation.call(5000);
+        });
+
+        buttonElement_3.addEventListener(EVENTNAME_TOUCHEND, () => {
+            vibtation.call(0);
+        });
+    }(window, document));
+</script>
+
+
+    </main>
+    <footer id="footer" role="contentinfo">
+        <p id="updates">
+            Update:Mon Mar 14 2016
+        </p>
+        <p id="copyright">
+            ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow" target="_blank">Metalsmith</a>
+        </p>
+    </footer>
+    
+
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-68414504-3','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>

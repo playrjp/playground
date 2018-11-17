@@ -55,7 +55,7 @@ Playground.prototype.build = callback => {
     .use(updated())
     .use(templates('nunjucks'))
     .source('src/')
-    .destination('build/')
+    .destination('docs/')
     .use(
       sass({
         outputStyle: 'expanded',
@@ -74,7 +74,7 @@ Playground.prototype.build = callback => {
 
 Playground.prototype.watch = ctx => {
   browserSync({
-    server: 'build',
+    server: 'docs',
     files: ['src/**/*.md', 'src/**/*.scss', 'templates/*.html'],
     middleware: (req, res, next) => {
       ctx.build(next);

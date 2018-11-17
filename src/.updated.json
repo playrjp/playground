@@ -283,9 +283,9 @@
     },
     "css-variables\\index.html": {
         "filename": "css-variables\\index.html",
-        "hash": "6fed46e4678f3828f044d9302a499c9b",
+        "hash": "80bdd6e263b84db7a8054e6f851b6ccd",
         "created": "2016-03-03T18:10:53.972Z",
-        "updated": "2016-03-06T03:33:17.037Z"
+        "updated": "2018-11-17T03:11:24.657Z"
     },
     "html-dialog-element\\index.html": {
         "filename": "html-dialog-element\\index.html",
@@ -307,9 +307,9 @@
     },
     "webapi-pointer-events\\index.html": {
         "filename": "webapi-pointer-events\\index.html",
-        "hash": "e56a8205098d11bae1b7e859a4d2bfef",
+        "hash": "eb42ad03680dea31a027619036e38893",
         "created": "2016-03-13T14:28:24.992Z",
-        "updated": "2016-03-13T14:31:47.179Z"
+        "updated": "2018-11-17T03:11:24.657Z"
     },
     "css-scroll-snap-points\\index.html": {
         "filename": "css-scroll-snap-points\\index.html",
@@ -334,5 +334,11 @@
         "hash": "9b1b05581c9d1f9a5186c5fd27e9bf39",
         "created": "2017-02-04T16:31:47.998Z",
         "updated": "2017-02-04T16:31:47.998Z"
+    },
+    "webapi-share\\index.html": {
+        "filename": "webapi-share\\index.html",
+        "hash": "6cfef0d2bbedbb9ec20d4a74ab59e973",
+        "created": "2018-11-17T03:11:24.657Z",
+        "updated": "2018-11-17T03:11:24.657Z"
     }
 }

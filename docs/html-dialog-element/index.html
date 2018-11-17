@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HTML Dialog Element - Playground</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My Playground for Future of Web Technology. ">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/common.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    
+<style>
+    #modal::backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+    }
+</style>
+
+</head>
+<body>
+    <header id="header" role="banner">
+        <h1><a href="http://ground.playr.jp">Playground</a></h1>
+        <nav id="navigation" role="navigation">
+            <ul>
+                <li>
+                    <a href="https://playr.jp">Playr</a>
+                </li>
+                <li>
+                    <a href="http://log.playr.jp">Playlog</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        
+
+<h1 id="html-dialog-element">HTML Dialog Element</h1>
+<ul>
+<li><a href="https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element">HTML Standard</a></li>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/API/HTMLDialogElement">HTMLDialogElement - Web API インターフェイス | MDN</a></li>
+<li><a href="http://caniuse.com/#feat=dialog">Can I use...</a></li>
+<li><a href="https://github.com/GoogleChrome/dialog-polyfill">polyfill</a></li>
+</ul>
+
+
+<!-- Dialog Window -->
+<dialog>
+    <p>This is Dialog!</p>
+    <button id="dialog__close">Close</button>
+</dialog>
+<button id="dialog__show">Open Dialog!</button>
+
+<!-- Modal Window -->
+<dialog id="modal">
+    <p>This is Dialog!</p>
+    <button id="modal__close">Close</button>
+</dialog>
+<button id="modal__show">Open Modal!</button>
+
+
+<script>
+    // Dialog Window
+    const dialog      = document.querySelector('dialog');
+    const showDialog  = document.getElementById('dialog__show');
+    const closeDialog = document.getElementById('dialog__close');
+
+    showDialog.addEventListener('click', () => {
+        dialog.show();
+    });
+
+    closeDialog.addEventListener('click', () => {
+        dialog.close();
+    });
+
+    // Modal Window
+    const modal      = document.getElementById('modal');
+    const showModal  = document.getElementById('modal__show');
+    const closeModal = document.getElementById('modal__close');
+
+    showModal.addEventListener('click', () => {
+        modal.showModal();
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.close();
+    });
+</script>
+
+
+
+    </main>
+    <footer id="footer" role="contentinfo">
+        <p id="updates">
+            Update:Sun Mar 13 2016
+        </p>
+        <p id="copyright">
+            ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow" target="_blank">Metalsmith</a>
+        </p>
+    </footer>
+    
+
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-68414504-3','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>

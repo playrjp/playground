@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WebAPI Share - Playground</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My Playground for Future of Web Technology. ">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/common.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    
+
+</head>
+<body>
+    <header id="header" role="banner">
+        <h1><a href="http://ground.playr.jp">Playground</a></h1>
+        <nav id="navigation" role="navigation">
+            <ul>
+                <li>
+                    <a href="https://playr.jp">Playr</a>
+                </li>
+                <li>
+                    <a href="http://log.playr.jp">Playlog</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" role="main">
+        
+
+<h1 id="web-share-api">Web Share API</h1>
+<ul>
+<li><a href="https://wicg.github.io/web-share/">Web Share API</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share - Web APIs | MDN</a></li>
+<li><a href="https://developers.google.com/web/updates/2016/09/navigator-share">Introducing the Web Share API  |  Web  |  Google Developers</a></li>
+<li><a href="https://caniuse.com/#feat=web-share">Can I use...</a></li>
+</ul>
+
+
+<button id="button">Vibration 3</button>
+
+<script>
+    (function(window, document) {
+        'use strict';
+
+        const button = document.getElementById('button');
+
+        button.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Web Fundamentals',
+                    text: 'Check out Web Fundamentals — it rocks!',
+                    url: 'https://developers.google.com/web',
+                })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+            } else {
+                alert('このブラウザーは未対応')
+            }
+
+        });
+    }(window, document));
+</script>
+
+
+    </main>
+    <footer id="footer" role="contentinfo">
+        <p id="updates">
+            Update:Sat Nov 17 2018
+        </p>
+        <p id="copyright">
+            ©2015 Playr. Powered by <a href="http://www.metalsmith.io/" rel="nofollow" target="_blank">Metalsmith</a>
+        </p>
+    </footer>
+    
+
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-68414504-3','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
