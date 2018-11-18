@@ -1,4 +1,4 @@
-$ff: 'Share Tech Mono';
+$ff: 'Coda', cursive;
 
 $link: #222;
 $hover: lighten($link, 35%);
@@ -63,6 +63,7 @@ html {
     margin: 0;
     li {
         list-style-type: decimal-leading-zero;
+        line-height: 2;
         a {
             color: $link;
             text-decoration: none;
