@@ -12,6 +12,7 @@
     "metalsmith-assets": "^0.1.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-markdown": "^1.1.0",
+    "metalsmith-metallic": "^2.0.2",
     "metalsmith-permalinks": "^2.0.0",
     "metalsmith-sass": "^1.5.1",
     "metalsmith-templates": "^0.7.0",

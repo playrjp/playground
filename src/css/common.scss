@@ -57,6 +57,11 @@ html {
     box-sizing: border-box;
     padding: 0 1em;
     font-size: 1.6rem;
+
+    code, kbd, pre, samp {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 1.4rem;
+    }
 }
 
 #index {

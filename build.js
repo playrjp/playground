@@ -7,6 +7,7 @@ const permalinks = require('metalsmith-permalinks');
 const templates = require('metalsmith-templates');
 const sass = require('metalsmith-sass');
 const updated = require('metalsmith-updated');
+const metallic = require('metalsmith-metallic');
 const browserSync = require('browser-sync');
 const argv = require('argv');
 
@@ -50,6 +51,7 @@ Playground.prototype.build = callback => {
         },
       }),
     )
+    .use(metallic())
     .use(markdown())
     .use(permalinks({ pattern: ':title' }))
     .use(updated())
